@@ -57,5 +57,7 @@ public class Reservation {
         return getBasePrice() + getWeekendSurcharge();
     }
 
-
+    public double getReservationTotal() {
+        return getPrice() * numberOfNights;
+    }
 }
