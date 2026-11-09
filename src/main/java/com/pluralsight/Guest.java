@@ -49,7 +49,7 @@ public class Guest {
     }
 
     public void checkIn() {
-            checkedIn = true;
+        checkedIn = true;
     }
 
     public void checkOut() {
