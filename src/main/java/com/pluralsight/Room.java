@@ -19,7 +19,7 @@ public class Room {
     }
 
     public double getPrice () {
-        return numberOfBeds;
+        return price;
     }
 
     public boolean isOccupied() {
