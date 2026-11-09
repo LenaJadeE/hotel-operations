@@ -10,6 +10,7 @@ public class Main {
         System.out.println("Clean and empty is available: " + clean.isAvailable());
         System.out.println("Dirty is available: " + dirty.isAvailable());
         System.out.println("Occupied is available: " + occupied.isAvailable());
+        System.out.printf("Clean room price: $%.2f%n", clean.getPrice());
         System.out.println();
 
         Reservation kingWeekend = new Reservation("king", 3, true);
