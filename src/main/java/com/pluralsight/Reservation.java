@@ -52,4 +52,10 @@ public class Reservation {
         }
         return 0;
     }
+
+    public double getPrice() {
+        return getBasePrice() + getWeekendSurcharge();
+    }
+
+
 }
