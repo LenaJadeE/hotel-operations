@@ -24,7 +24,16 @@ public class Main {
         System.out.printf("King, 3 nights, weekday: weekend surcharge $%.2f a night%n", kingWeekday.getWeekendSurcharge());
         System.out.println();
 
-
+        Guest guest = new Guest("Dana", "Reyes", "817-555-0142");
+        System.out.println(guest.getFullName() + ", phone " + guest.getPhone());
+        System.out.println("Checked in: " + guest.isCheckedIn() + ", stays: " + guest.getNumberOfStays()
+                + ", returning guest: " + guest.isReturningGuest());
+        guest.checkIn();
+        System.out.println("After check in: checked in " + guest.isCheckedIn() + ", stays " + guest.getNumberOfStays());
+        guest.checkOut();
+        System.out.println("After check out: checked in " + guest.isCheckedIn() + ", stays " + guest.getNumberOfStays()
+                + ", returning guest: " + guest.isReturningGuest());
+        System.out.println();
 
     }
 }
