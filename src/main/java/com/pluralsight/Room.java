@@ -18,7 +18,7 @@ public class Room {
         return numberOfBeds;
     }
 
-    public double getPrice () {
+    public double getPrice() {
         return price;
     }
 
@@ -26,7 +26,7 @@ public class Room {
         return occupied;
     }
 
-    public boolean isDirty () {
+    public boolean isDirty() {
         return dirty;
     }
 
