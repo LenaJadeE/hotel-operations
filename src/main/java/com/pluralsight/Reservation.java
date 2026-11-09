@@ -37,9 +37,9 @@ public class Reservation {
     }
 
     private double getBasePrice() {
-        if (roomType.equals("king")) {
+        if (roomType.equalsIgnoreCase("king")) {
             return 139.00;
-        } else if (roomType.equals("double")) {
+        } else if (roomType.equalsIgnoreCase("double")) {
             return 124.00;
         } else {
             return 0;
