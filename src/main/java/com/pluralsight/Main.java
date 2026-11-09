@@ -35,5 +35,24 @@ public class Main {
                 + ", returning guest: " + guest.isReturningGuest());
         System.out.println();
 
+        Receipt receipt = new Receipt(guest.getFullName(), 204, 3, 152.90, 42.50);
+        System.out.println("Receipt for " + receipt.getGuestName() + ", room " + receipt.getRoomNumber());
+        System.out.printf("Room charges: $%.2f%n", receipt.getRoomCharges());
+        System.out.printf("Other charges: $%.2f%n", receipt.getOtherCharges());
+        System.out.printf("Total: $%.2f%n", receipt.getTotal());
+        System.out.println();
+
+        Employee twentyHours = new Employee(1, "Ana Torres", "Housekeeping", 20.00, 20);
+        Employee fortyFiveHours = new Employee(2, "Ben Ortiz", "Front Desk", 20.00, 45);
+
+        printEmployee(twentyHours);
+        printEmployee(fortyFiveHours);
+
+    }
+
+    private static void printEmployee(Employee employee) {
+        System.out.printf("%s worked %.0f hours: %.0f regular, %.0f overtime, pay $%.2f%n",
+                employee.getName(), employee.getHoursWorked(), employee.getRegularHours(),
+                employee.getOvertimeHours(), employee.getTotalPay());
     }
 }

@@ -28,7 +28,7 @@ public class Receipt {
         return pricePerNight;
     }
 
-    private double getOtherCharges() {
+    public double getOtherCharges() {
         return otherCharges;
     }
 
