@@ -12,7 +12,7 @@ public class Guest {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
-        this.checkedIn = true;
+        this.checkedIn = false;
         this.numberOfStays = 0;
     }
 
@@ -49,9 +49,7 @@ public class Guest {
     }
 
     public void checkIn() {
-        if (!checkedIn) {
             checkedIn = true;
-        }
     }
 
     public void checkOut() {
