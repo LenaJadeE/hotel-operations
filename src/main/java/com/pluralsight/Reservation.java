@@ -36,5 +36,15 @@ public class Reservation {
         this.weekend = weekend;
     }
 
+    private double getBasePrice() {
+        if (roomType.equals("king")) {
+            return 139.00;
+        } else if (roomType.equals("double")) {
+            return 124.00;
+        } else {
+            return 0;
+        }
+    }
+
 
 }
