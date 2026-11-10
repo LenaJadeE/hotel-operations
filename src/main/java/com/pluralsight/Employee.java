@@ -67,6 +67,14 @@ public class Employee {
         startTime = getCurrentTime();
     }
 
+    public void punchOut(int time) {
+        hoursWorked += time - startTime;
+    }
+
+    public void punchOut() {
+        hoursWorked += getCurrentTime() - startTime;
+    }
+
     private double getCurrentTime() {
         LocalDateTime now = LocalDateTime.now();
         return now.getHour() + now.getMinute() / 60.0;
