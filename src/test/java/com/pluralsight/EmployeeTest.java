@@ -42,4 +42,15 @@ public class EmployeeTest {
         double actualHours = employee.getHoursWorked();
         assertEquals(expectedHours, actualHours);
     }
+
+    @Test
+    void punchIn_should_notChangeHoursWorked() {
+        Employee employee = new Employee(1, "Ana Torres", "Housekeeping", 20.00, 0);
+        double expectedHours = 0;
+
+        employee.punchIn(10);
+
+        double actualHours = employee.getHoursWorked();
+        assertEquals(expectedHours, actualHours);
+    }
 }
