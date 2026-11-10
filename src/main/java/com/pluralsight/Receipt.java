@@ -2,11 +2,11 @@ package com.pluralsight;
 
 public class Receipt {
 
-    private String guestName;
-    private int roomNumber;
-    private int numberOfNights;
-    private double pricePerNight;
-    private double otherCharges;
+    private final String guestName;
+    private final int roomNumber;
+    private final int numberOfNights;
+    private final double pricePerNight;
+    private final double otherCharges;
 
     public Receipt(String guestName, int roomNumber, int numberOfNights, double pricePerNight, double otherCharges) {
         this.guestName = guestName;
