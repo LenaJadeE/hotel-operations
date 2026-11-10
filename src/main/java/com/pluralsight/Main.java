@@ -97,6 +97,12 @@ public class Main {
         kingWeekday.setWeekend(true);
         System.out.println("Reservation: " + kingWeekday.getRoomType() + ", " + kingWeekday.getNumberOfNights()
                 + " nights, weekend " + kingWeekday.isWeekend());
+
+        Hotel busyHotel = new Hotel("Harbor View", 4, 20, 1, 3);
+        System.out.println(busyHotel.getName() + ": " + busyHotel.getNumberOfSuites() + " suites, "
+                + busyHotel.getNumberOfRooms() + " rooms");
+        System.out.println("Booked suites: " + busyHotel.getBookedSuites() + ", booked basic rooms: "
+                + busyHotel.getBookedBasicRooms());
     }
 
     private static void printEmployee(Employee employee) {
