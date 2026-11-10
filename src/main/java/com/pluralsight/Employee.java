@@ -61,27 +61,29 @@ public class Employee {
 
     public void punchIn(int time) {
         startTime = time;
+        punchedIn = true;
     }
 
     public void punchIn() {
         startTime = getCurrentTime();
+        punchedIn = true;
     }
 
     public void punchOut(int time) {
         hoursWorked += time - startTime;
+        punchedIn = false;
     }
 
     public void punchOut() {
         hoursWorked += getCurrentTime() - startTime;
+        punchedIn = false;
     }
 
     public void punchTimeCard(int time) {
         if (punchedIn) {
             punchOut(time);
-            punchedIn = false;
         } else {
             punchIn(time);
-            punchedIn = true;
         }
     }
 
