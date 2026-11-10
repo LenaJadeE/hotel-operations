@@ -85,6 +85,12 @@ public class Main {
         System.out.println("Book 7 basic rooms: " + hotel.bookRoom(7, false));
         System.out.println("Available rooms: " + hotel.getAvailableRooms());
 
+        System.out.println("Beds in room: " + clean.getNumberOfBeds());
+        System.out.println("Employee " + twentyHours.getEmployeeId() + " works in " + twentyHours.getDepartment()
+                + " and earns $" + twentyHours.getPayRate() + " an hour");
+        guest.setPhone("817-555-0199");
+        System.out.println(guest.getFirstName() + " " + guest.getLastName() + ", new phone " + guest.getPhone());
+        System.out.printf("Receipt price per night: $%.2f%n", receipt.getPricePerNight());
     }
 
     private static void printEmployee(Employee employee) {
