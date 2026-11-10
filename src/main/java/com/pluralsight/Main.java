@@ -70,7 +70,11 @@ public class Main {
         card.punchTimeCard(17);
         System.out.printf("Time card 9 then 17: %.2f hours%n", card.getHoursWorked());
 
-
+        Employee quick = new Employee(4, "Eli Park", "Front Desk", 20.00, 0);
+        quick.punchIn();
+        quick.punchOut();
+        System.out.printf("Punch in and straight out: %.2f hours%n", quick.getHoursWorked());
+        System.out.println();
     }
 
     private static void printEmployee(Employee employee) {
