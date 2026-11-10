@@ -65,6 +65,11 @@ public class Main {
         worker.punchOut(14);
         System.out.printf("Punch in at 10, out at 14: %.2f hours%n", worker.getHoursWorked());
 
+        Employee card = new Employee(5, "Mia Cole", "Housekeeping", 16.00, 0);
+        card.punchTimeCard(9);
+        card.punchTimeCard(17);
+        System.out.printf("Time card 9 then 17: %.2f hours%n", card.getHoursWorked());
+
 
     }
 
