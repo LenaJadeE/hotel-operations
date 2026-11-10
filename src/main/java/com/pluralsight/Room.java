@@ -35,6 +35,12 @@ public class Room {
     }
 
     public void checkIn() {
+        if (occupied) {
+            return;
+        }
+        if (dirty) {
+            return;
+        }
         occupied = true;
         dirty = true;
     }
@@ -44,6 +50,9 @@ public class Room {
     }
 
     public void cleanRoom() {
+        if (occupied) {
+            return;
+        }
         dirty = false;
     }
 }
