@@ -15,4 +15,13 @@ public class RoomTest {
         assertEquals(true, actualOccupied);
     }
 
+    @Test
+    void checkIn_should_makeRoomDirty() {
+        Room room = new Room(2, 124.00, false, false);
+
+        room.checkIn();
+
+        boolean actualDirty = room.isDirty();
+        assertEquals(true, actualDirty);
+    }
 }
