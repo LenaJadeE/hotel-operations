@@ -2,8 +2,8 @@ package com.pluralsight;
 
 public class Guest {
 
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
     private String phone;
     private boolean checkedIn;
     private int numberOfStays;
