@@ -58,6 +58,13 @@ public class Main {
 
         printEmployee(twentyHours);
         printEmployee(fortyFiveHours);
+        System.out.println();
+
+        Employee worker = new Employee(3, "Cy Lane", "Maintenance", 18.00, 0);
+        worker.punchIn(10);
+        worker.punchOut(14);
+        System.out.printf("Punch in at 10, out at 14: %.2f hours%n", worker.getHoursWorked());
+
 
     }
 
