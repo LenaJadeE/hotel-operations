@@ -13,6 +13,16 @@ public class Main {
         System.out.printf("Clean room price: $%.2f%n", clean.getPrice());
         System.out.println();
 
+        Room room = new Room(2, 124.00, false, false);
+        System.out.println("Start: " + room.isAvailable());
+        room.checkIn();
+        System.out.println("After check in: " + room.isAvailable());
+        room.checkOut();
+        System.out.println("After check out: " + room.isAvailable());
+        room.cleanRoom();
+        System.out.println("After cleaning: " + room.isAvailable());
+        System.out.println();
+
         Reservation kingWeekend = new Reservation("king", 3, true);
         System.out.printf("King, 3 nights, weekend: $%.2f a night, $%.2f total%n",
                 kingWeekend.getPrice(), kingWeekend.getReservationTotal());
