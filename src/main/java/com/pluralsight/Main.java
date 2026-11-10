@@ -91,6 +91,12 @@ public class Main {
         guest.setPhone("817-555-0199");
         System.out.println(guest.getFirstName() + " " + guest.getLastName() + ", new phone " + guest.getPhone());
         System.out.printf("Receipt price per night: $%.2f%n", receipt.getPricePerNight());
+
+        kingWeekday.setRoomType("double");
+        kingWeekday.setNumberOfNights(5);
+        kingWeekday.setWeekend(true);
+        System.out.println("Reservation: " + kingWeekday.getRoomType() + ", " + kingWeekday.getNumberOfNights()
+                + " nights, weekend " + kingWeekday.isWeekend());
     }
 
     private static void printEmployee(Employee employee) {
