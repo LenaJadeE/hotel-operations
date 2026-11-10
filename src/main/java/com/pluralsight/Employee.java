@@ -4,10 +4,10 @@ import java.time.LocalDateTime;
 
 public class Employee {
 
-    private int employeeId;
-    private String name;
-    private String department;
-    private double payRate;
+    private final int employeeId;
+    private final String name;
+    private final String department;
+    private final double payRate;
     private double hoursWorked;
     private double startTime;
     private boolean punchedIn;
