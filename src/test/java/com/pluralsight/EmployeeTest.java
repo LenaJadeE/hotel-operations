@@ -53,4 +53,15 @@ public class EmployeeTest {
         double actualHours = employee.getHoursWorked();
         assertEquals(expectedHours, actualHours);
     }
+
+    @Test
+    void punchTimeCard_should_punchOut_afterPunchIn() {
+        Employee employee = new Employee(1, "Ana Torres", "Housekeeping", 20.00, 0);
+
+        employee.punchIn(10);
+        employee.punchTimeCard(14);
+
+        double actualHours = employee.getHoursWorked();
+        assertEquals(4.0, actualHours);
+    }
 }
