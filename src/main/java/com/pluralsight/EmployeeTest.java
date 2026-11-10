@@ -29,5 +29,17 @@ public class EmployeeTest {
         assertEquals(expectedHours, actualHours);
     }
 
+    @Test
+    void punchOut_should_addEachShift() {
+        Employee employee = new Employee(1, "Ana Torres", "Housekeeping", 20.00, 0);
+        double expectedHours = 12;
 
+        employee.punchIn(10);
+        employee.punchOut(14);
+        employee.punchIn(9);
+        employee.punchOut(17);
+
+        double actualHours = employee.getHoursWorked();
+        assertEquals(expectedHours, actualHours);
+    }
 }
