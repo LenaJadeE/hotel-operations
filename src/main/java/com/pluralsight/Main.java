@@ -75,6 +75,16 @@ public class Main {
         quick.punchOut();
         System.out.printf("Punch in and straight out: %.2f hours%n", quick.getHoursWorked());
         System.out.println();
+
+
+        Hotel hotel = new Hotel("Lakeside Inn", 2, 10);
+        System.out.println("Book 2 suites: " + hotel.bookRoom(2, true));
+        System.out.println("Book 1 more suite: " + hotel.bookRoom(1, true));
+        System.out.println("Available suites: " + hotel.getAvailableSuites());
+        System.out.println("Book 4 basic rooms: " + hotel.bookRoom(4, false));
+        System.out.println("Book 7 basic rooms: " + hotel.bookRoom(7, false));
+        System.out.println("Available rooms: " + hotel.getAvailableRooms());
+
     }
 
     private static void printEmployee(Employee employee) {
@@ -82,4 +92,5 @@ public class Main {
                 employee.getName(), employee.getHoursWorked(), employee.getRegularHours(),
                 employee.getOvertimeHours(), employee.getTotalPay());
     }
+
 }
