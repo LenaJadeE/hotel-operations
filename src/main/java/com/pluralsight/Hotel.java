@@ -2,9 +2,9 @@ package com.pluralsight;
 
 public class Hotel {
 
-    private String name;
-    private int numberOfSuites;
-    private int numberOfRooms;
+    private final String name;
+    private final int numberOfSuites;
+    private final int numberOfRooms;
     private int bookedSuites;
     private int bookedBasicRooms;
 
