@@ -75,6 +75,16 @@ public class Employee {
         hoursWorked += getCurrentTime() - startTime;
     }
 
+    public void punchTimeCard(int time) {
+        if (punchedIn) {
+            punchOut(time);
+            punchedIn = false;
+        } else {
+            punchIn(time);
+            punchedIn = true;
+        }
+    }
+
     private double getCurrentTime() {
         LocalDateTime now = LocalDateTime.now();
         return now.getHour() + now.getMinute() / 60.0;
