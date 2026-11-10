@@ -1,4 +1,21 @@
 package com.pluralsight;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class EmployeeTest {
+
+    @Test
+    void punchOut_should_addHoursWorked() {
+        Employee employee = new Employee(1, "Ana Torres", "Housekeeping", 20.00, 0);
+        double expectedHours = 4;
+
+        employee.punchIn(10);
+        employee.punchOut(14);
+
+        double actualHours = employee.getHoursWorked();
+        assertEquals(expectedHours, actualHours);
+    }
+
+
 }
