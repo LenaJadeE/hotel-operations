@@ -75,5 +75,23 @@ public class RoomTest {
         assertEquals(false, actualDirty);
     }
 
+    @Test
+    void checkIn_should_doNothing_whenRoomIsDirty() {
+        Room room = new Room(1, 139.00, false, true);
 
+        room.checkIn();
+
+        boolean actualOccupied = room.isOccupied();
+        assertEquals(false, actualOccupied);
+    }
+
+    @Test
+    void cleanRoom_should_doNothing_whenRoomIsOccupied() {
+        Room room = new Room(1, 139.00, true, true);
+
+        room.cleanRoom();
+
+        boolean actualDirty = room.isDirty();
+        assertEquals(true, actualDirty);
+    }
 }
