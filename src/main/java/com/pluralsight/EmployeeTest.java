@@ -17,5 +17,17 @@ public class EmployeeTest {
         assertEquals(expectedHours, actualHours);
     }
 
+    @Test
+    void punchOut_should_addToExistingHours() {
+        Employee employee = new Employee(1, "Ana Torres", "Housekeeping", 20.00, 20);
+        double expectedHours = 24;
+
+        employee.punchIn(10);
+        employee.punchOut(14);
+
+        double actualHours = employee.getHoursWorked();
+        assertEquals(expectedHours, actualHours);
+    }
+
 
 }
